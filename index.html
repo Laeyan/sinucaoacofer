@@ -426,6 +426,117 @@
     header{ padding:44px 16px 76px; }
     .section-head h2{ font-size:20px; }
   }
+  /* =========================================
+   TABELA DE JOGOS - ESTILO
+  ========================================= */
+  
+  .games {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Cada confronto */
+  .games thead tr {
+      height: 74px;
+      background: #ffffff;
+  }
+  
+  /* Células */
+  .games th,
+  .games td {
+      padding: 0 18px;
+      height: 74px;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: middle;
+  }
+  
+  /* Rodada */
+  .games th:first-child {
+      width: 70px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0b3b5d;
+  }
+  
+  /* Criando o bloco arredondado da rodada */
+  .games th:first-child {
+      position: relative;
+  }
+  
+  /* Nome do jogador */
+  .games th:nth-child(2),
+  .games td:nth-child(2) {
+      text-align: left;
+      font-size: 15px;
+      font-weight: 600;
+      color: #062f4f;
+  }
+  
+  /* Segundo jogador */
+  .games th:nth-child(3),
+  .games td:nth-child(3) {
+      text-align: right;
+      font-size: 15px;
+      font-weight: 600;
+      color: #062f4f;
+  }
+  
+  /* Espaço entre os confrontos */
+  .games + .games {
+      margin-top: 0;
+  }
+  
+  /* Efeito suave ao passar o mouse */
+  .games:hover thead tr {
+      background: #fafbfc;
+  }
+  
+  /* =========================================
+     ESTILO DO BLOCO DA RODADA
+  ========================================= */
+  
+  .games th:first-child {
+      color: transparent;
+      font-size: 0;
+  }
+  
+  .games th:first-child::after {
+      content: attr(data-round);
+      color: #0b3b5d;
+      font-size: 13px;
+      font-weight: 700;
+  }
+  
+  /* =========================================
+     RESPONSIVO
+  ========================================= */
+  
+  @media (max-width: 600px) {
+  
+      .games th,
+      .games td {
+          height: 62px;
+          padding: 0 12px;
+      }
+  
+      .games th:first-child {
+          width: 60px;
+          font-size: 11px;
+      }
+  
+      .games th:nth-child(2),
+      .games th:nth-child(3),
+      .games td:nth-child(2),
+      .games td:nth-child(3) {
+          font-size: 14px;
+      }
+}
 </style>
 </head>
 <body>
@@ -515,6 +626,721 @@
         <tbody id="rank-body"></tbody>
       </table>
       <p class="empty-note">Empates mantêm a ordem alfabética entre os jogadores.</p>
+    </div>
+    <div>
+      <!-- =========================
+           RODADA 1
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">José</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="1ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">Higor</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 2
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>Valdemir</th>
+            <th style="text-align:right">Emerson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>Diogo</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Renato</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>Edson</th>
+            <th style="text-align:right">Eduardo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Mateus</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="2ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">Robson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 3
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Valdemir</th>
+            <th style="text-align:right">José</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Nilson</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Higor</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Walmir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="3ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">Robson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 4
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Emerson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>Edson</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">Renato</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="4ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">Eduardo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 5
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Higor</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>Diogo</th>
+            <th style="text-align:right">Walmir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>Valdemir</th>
+            <th style="text-align:right">Robson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>Nilson</th>
+            <th style="text-align:right">Mateus</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="5ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Eduardo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 6
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Emerson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">José</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="6ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 7
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Walmir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Robson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>Edson</th>
+            <th style="text-align:right">Mateus</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Eduardo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>Diogo</th>
+            <th style="text-align:right">Renato</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="7ª Rodada"></th>
+            <th>Valdemir</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 8
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">Emerson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">Walmir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Higor</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Nilson</th>
+            <th style="text-align:right">José</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="8ª Rodada"></th>
+            <th>Diogo</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 9
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Mateus</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">Eduardo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">Renato</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>Edson</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="9ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 10
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Emerson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>Renato</th>
+            <th style="text-align:right">Mateus</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>Nilson</th>
+            <th style="text-align:right">Robson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>Valdemir</th>
+            <th style="text-align:right">Walmir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>Diogo</th>
+            <th style="text-align:right">Higor</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="10ª Rodada"></th>
+            <th>José</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      
+      <!-- =========================
+           RODADA 11
+      ========================= -->
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Emerson</th>
+            <th style="text-align:right">Renato</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Eduardo</th>
+            <th style="text-align:right">Nilson</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Mateus</th>
+            <th style="text-align:right">Valdemir</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Robson</th>
+            <th style="text-align:right">Diogo</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Walmir</th>
+            <th style="text-align:right">José</th>
+          </tr>
+        </thead>
+      </table>
+      
+      <table class="games">
+        <thead>
+          <tr>
+            <th style="width:70px" data-round="11ª Rodada"></th>
+            <th>Higor</th>
+            <th style="text-align:right">Edson</th>
+          </tr>
+        </thead>
+      </table>
     </div>
   </section>
 
